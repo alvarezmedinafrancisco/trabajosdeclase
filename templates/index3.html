@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maravillas</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+{% block titulo %}
+<h1 class="text-center text-danger p-3">maravillas del mundo</h1>
+{% endblock %}
+
+
+{% block info %}
+<section class="container py-5">
+  <div class="p-5 bg-light rounded-4 shadow-lg">
+  <h2 class="text-center text-dark-emphasis mb-4">como se eligen las maravillas del mundo</h2>
+  <div class="fs-4 p-5 text-dark-emphasis" border-radius: 10px;">
+Las siete maravillas del mundo moderno fueron elegidas mediante un concurso público e internacional organizado por la empresa privada New Open World Corporation, fundada por el empresario suizo Bernard Weber, que se llevó a cabo en 2007.
+ El proceso, que contó con más de 100 millones de votaciones, permitió al público votar por sus candidatos favoritos a través de Internet, mensajes de texto (SMS) y llamadas telefónicas.
+  </div>
+</div>
+    <div class="alert alert-info text-center mt-4 fs-6">
+          🔧 <strong>Dato curioso:</strong>Los resultados, anunciados el 7 de julio de 2007 en el Estadio de Luz de Lisboa, Portugal, en una ceremonia transmitida a más de 170 países, seleccionaron siete monumentos que aún se encuentran en pie y fueron creados por el ser humano hasta el año 2000.
+  </div>
+</section>
+<div class="container py-5">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+        <img style="  width: 100% , height: 250px;"  src="static/maravillas del mundo/china.jpg" class="card-img-top" alt="Gran Muralla China">
+        <div class="card-body">
+          <h5 class="card-title text-primary">🏯 La Gran Muralla China (China)</h5>
+          <p class="card-text">Una muralla de más de 21,000 kilómetros construida para proteger al imperio chino de invasores. Es una de las obras más largas y asombrosas jamás hechas por el hombre.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+        <img  style="  width: 100% , height: 250px;"  src="static/maravillas del mundo/petra.jpg" class="card-img-top" alt="Petra">
+        <div class="card-body">
+          <h5 class="card-title text-primary">🏜️Petra (Jordania)</h5>
+          <p class="card-text">Una ciudad tallada directamente en roca rosa hace más de 2,000 años. Fue un centro comercial muy importante en medio del desierto y es famosa por su entrada monumental llamada El Tesoro.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+        <img style="  width: 100% , height: 250px;"  src="static/maravillas del mundo/cristo.jpg" class="card-img-top" alt="Cristo Redentor">
+        <div class="card-body">
+          <h5 class="card-title text-danger">✝️ Cristo Redentor (Brasil)</h5>
+          <p class="card-text">La enorme estatua de Jesucristo ubicada en Río de Janeiro, mide 38 metros de alto y se levanta sobre el cerro del Corcovado. Es símbolo de paz y fe en todo el mundo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+        <img style="  width: 100% , height: 250px;"  src="static/maravillas del mundo/machu.jpg" class="card-img-top" alt="Machu Picchu">
+        <div class="card-body">
+          <h5 class="card-title text-danger">🏔️ Machu Picchu (Perú)</h5>
+          <p class="card-text">Una antigua ciudad inca construida en las montañas de los Andes. Su arquitectura es tan precisa que ha resistido siglos sin cemento. Es una de las joyas arqueológicas más visitadas del planeta.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+        <img style="  width: 100% , height: 250px;"  src="static/maravillas del mundo/chichen.jpg" class="card-img-top" alt="chichen itza">
+        <div class="card-body">
+          <h5 class="card-title text-warning">🐍 Chichén Itzá (México) 🇲🇽</h5>
+          <p class="card-text">Antigua ciudad maya famosa por su pirámide de Kukulkán, donde durante los equinoccios, la sombra del sol crea la forma de una serpiente descendiendo por las escaleras. Una maravilla de precisión astronómica.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+        <img style="  width: 100% , height: 250px;"  src="static/maravillas del mundo/coli.jpg" class="card-img-top" alt="el coliseo">
+        <div class="card-body">
+          <h5 class="card-title text-warning">🏛️ El Coliseo (Italia)</h5>
+          <p class="card-text">El gran anfiteatro de Roma, donde se realizaban combates de gladiadores y espectáculos públicos. A pesar de tener casi 2,000 años, aún se mantiene en pie como símbolo del Imperio Romano.</p>
+        </div>
+      </div>
+    </div>
+
+     <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+        <img style="  width: 100% , height: 250px;"  src="static/maravillas del mundo/taj.jpg" class="card-img-top" alt="taj mahal">
+        <div class="card-body">
+          <h5 class="card-title text-warning">💎 Taj Mahal (India)</h5>
+          <p class="card-text">Un mausoleo de mármol blanco construido por el emperador Shah Jahan en honor a su esposa Mumtaz Mahal. Es una de las mayores demostraciones de amor en la historia y una joya de la arquitectura mundial.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=S2oiBg_Jl-8" frameborder="0" allowfullscreen></iframe>   
+        <div class="card-body">
+          <h5 class="card-title text-warning">maravillas</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+</body>
+</html>

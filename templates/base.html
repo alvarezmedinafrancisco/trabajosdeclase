@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body style="background-color: bisque;">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">plantilla</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="">inicio/home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/index1">animales exoticos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/index2">vehicuos antiguos</a>
+        </li>
+        <li class="nav-item dropdown" href="/index3">
+          <a class="nav-link" href="/index3">
+            maravillas del mundo
+          </a>
+          
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" href="/acerca">acerca de...</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+{%block titulo%}
+<h1 class="text-center text-dark-emphasis p-3">Mi primer plantilla con Flask y Jinja2</h1>
+{%endblock%}
+{%block info%}
+<div class="fs-4 p-5 text-dark-emphasis-italic" style="background-color: bisque;">
+En esta página podremos encontrar información sobre animales exóticos, vehículos antiguos y las maravillas del mundo. También contiene un buscador para encontrar información más rápido, y un menú de navegación para acceder a las diferentes secciones.
+</div>
+<div class="row">
+  <div class="col-1"></div>
+    <img class="col-4" style="width:500px" src="static/a.jpg" alt="">
+    <div class="col-1"></div>
+    <img class="col-5" style="width:500px" src="static/f.jpg" alt="">
+    <div class="col-2"></div>
+</div>
+{%endblock%}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+<footer>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2025 Copyright:
+      <div class="text-dark">Alvarez Medina Francisco</div>
+    </div>
+  </footer>
+</html>

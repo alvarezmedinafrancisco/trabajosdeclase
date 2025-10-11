@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animales</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block titulo %}
+<h1 class="text-center text-success p-3">Animales Exóticos</h1>
+{% endblock %}
+
+
+{% block info %}
+<section class="container py-5">
+  <div class="p-5 bg-light rounded-4 shadow-lg">
+    <h2 class="text-center text-dark mb-4">¿Qué son los animales exóticos?</h2>
+    <p class="fs-5 text-center">
+      Los <strong>animales exóticos</strong> son especies que destacan por su rareza, belleza o por no encontrarse naturalmente en ciertas regiones del mundo.
+      Pueden ser exóticos por su <em>apariencia</em>, <em>comportamiento</em> o por sus <em>habilidades únicas</em>.
+      Desde criaturas marinas que brillan en la oscuridad, hasta aves de colores intensos o reptiles venenosos, estos animales son verdaderas joyas de la naturaleza. 🐍🦜🐠
+    </p>
+
+    <div class="row mt-4">
+      <div class="col-md-4 text-center">
+        <h4 class="text-primary">🌊 Acuáticos</h4>
+        <p class="fs-6">
+          Viven en mares o ríos y suelen tener formas o habilidades impresionantes como producir luz o sobrevivir a gran profundidad.
+        </p>
+      </div>
+      <div class="col-md-4 text-center">
+        <h4 class="text-danger">🌍 Terrestres</h4>
+        <p class="fs-6">
+          Habitan en selvas, desiertos o montañas. Muchos tienen camuflaje, veneno o sentidos sobrehumanos.
+        </p>
+      </div>
+      <div class="col-md-4 text-center">
+        <h4 class="text-warning">☁️ Aéreos</h4>
+        <p class="fs-6">
+          Aves majestuosas de plumajes coloridos que vuelan sobre los bosques más exóticos del planeta.
+        </p>
+      </div>
+    </div>
+    <hr class="my-4">
+    <h3 class="text-center text-success">🌱 Importancia ecológica</h3>
+    <p class="fs-5 text-center">
+      Los animales exóticos son vitales para mantener el <strong>equilibrio ecológico</strong> de sus hábitats, controlar plagas y conservar la diversidad del planeta.
+      Lamentablemente, muchos están en <strong>peligro de extinción</strong> por la caza ilegal, la pérdida de hábitat y el cambio climático.
+      Cuidarlos es proteger la vida misma. 🌎💚
+    </p>
+    <div class="alert alert-info text-center mt-4 fs-6">
+      🧠 <strong>Dato curioso:</strong> Algunos animales exóticos han inspirado avances tecnológicos, como los <em>geckos</em> que dieron origen a nuevos tipos de adhesivos, o los <em>pulpos</em> que inspiraron robots flexibles.
+    </div>
+  </div>
+</section>
+<div class="container py-5">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+        <img style="  width: 100% , height: 250px;"  src="static/animales/camalar.jpg" class="card-img-top" alt="Calamar colosal">
+        <div class="card-body">
+          <h5 class="card-title text-primary">Calamar colosal</h5>
+          <p class="card-text">Vive en aguas antárticas y puede medir más de 14 m. Posee ganchos giratorios en los tentáculos y los ojos más grandes del reino animal. 🦑</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+        <img  style="  width: 100% , height: 250px;"  src="static/animales/pepe.jpg" class="card-img-top" alt="Pez dragón negro">
+        <div class="card-body">
+          <h5 class="card-title text-primary">Pez dragón negro</h5>
+          <p class="card-text">Depredador de las profundidades que produce luz con su cuerpo. La hembra tiene colmillos transparentes y un señuelo brillante para cazar. 🐉</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+        <img style="  width: 100% , height: 250px;"  src="static/animales/komodo.jpg" class="card-img-top" alt="Dragón de Komodo">
+        <div class="card-body">
+          <h5 class="card-title text-danger">Dragón de Komodo</h5>
+          <p class="card-text">El lagarto más grande del planeta. Tiene veneno y puede derribar a un búfalo. Un verdadero dinosaurio viviente. 🦎</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+        <img style="  width: 100% , height: 250px;"  src="static/animales/asas.jpg" class="card-img-top" alt="Aye-aye">
+        <div class="card-body">
+          <h5 class="card-title text-danger">Aye-aye</h5>
+          <p class="card-text">Mamífero nocturno de Madagascar con un dedo huesudo para sacar insectos. Tan raro que se le considera de mala suerte. 🐒</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+        <img style="  width: 100% , height: 250px;"  src="static/animales/arpia.jpg" class="card-img-top" alt="Harpía mayor">
+        <div class="card-body">
+          <h5 class="card-title text-warning">Harpía mayor</h5>
+          <p class="card-text">El águila más poderosa del mundo. Puede levantar monos con sus garras del tamaño de las de un oso. 🦅</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg">
+        <img style="  width: 100% , height: 250px;"  src="static/animales/azul.jpg" class="card-img-top" alt="Guacamayo jacinto">
+        <div class="card-body">
+          <h5 class="card-title text-warning">Guacamayo jacinto</h5>
+          <p class="card-text">El loro más grande del mundo. Su color azul eléctrico y pico potente lo hacen inconfundible. 🦜</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+</body>
+</html>

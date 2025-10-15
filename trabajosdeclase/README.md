@@ -1,2 +1,0 @@
-# trabajosdeclase
-trabajos de clase

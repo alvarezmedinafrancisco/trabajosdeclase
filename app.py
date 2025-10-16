@@ -22,5 +22,10 @@ def maravillas():
 def acercade():
     return render_template('acerca.html')
 
+@app.route('/secion')
+def secion():
+    return render_template('secion.html')
+ 
+ 
 if __name__ == '__main__':
     app.run(debug=True)

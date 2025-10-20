@@ -1,5 +1,4 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request
 app = Flask(__name__)
 
 @app.route('/')
@@ -22,10 +21,24 @@ def maravillas():
 def acercade():
     return render_template('acerca.html')
 
-@app.route('/secion')
+@app.route('/secion', methods=["GET", "POST"])
 def secion():
-    return render_template('secion.html')
-    
-    
+    error = None
+    if request.method == "POST":
+        contra = request.form.get("contra")
+        newcontra = request.form.get("newcontra")
+        boton = request.form.get("boton")
+        if not contra or not newcontra:
+            error = "este campo es requerido."
+        elif contra != newcontra:
+            error = "contraseñas no coinciden."
+        else:
+            error = "contraseña actualizada con exito."
+            if boton == "boton":
+                return render_template('base.html', error=error)
+            
+    return render_template('secion.html', error=error)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

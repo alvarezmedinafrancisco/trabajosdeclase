@@ -28,12 +28,13 @@ def secion():
         contra = request.form.get("contra")
         newcontra = request.form.get("newcontra")
         boton = request.form.get("boton")
+        
         if not contra or not newcontra:
-            error = "este campo es requerido."
+            error = "Este campo es requerido."
         elif contra != newcontra:
-            error = "contraseñas no coinciden."
+            error = "Las contraseñas no coinciden."
         else:
-            error = "contraseña actualizada con exito."
+            error = "Contraseña actualizada con éxito."
             if boton == "boton":
                 return render_template('base.html', error=error)
             

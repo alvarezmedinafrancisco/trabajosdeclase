@@ -8,7 +8,8 @@ app.py
 
 tengo que hacer lo de sesion para que se guarde y despues validar con otra template que sea login 
 la primera es regirter con un submit cuando se mande a llamar otra ruta llamada validlogin para validar
-si son iguales y si esta mal lo reinicio 
+si son iguales y si esta mal lo reinicio aber si puedo ocultar el navbar en lo que no esta logeado 
+y ponerle como las iniciales del correo con el que se logee y añadir el nombre del que inicio secion
 
 
 pepepe

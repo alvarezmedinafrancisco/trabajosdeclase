@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request , redirtect , url_for , sesion
 app = Flask(__name__)
 
 @app.route('/')

@@ -5,6 +5,12 @@ python -m venv venv
 pip install flask
 python.exe -m pip install --upgrade pip
 app.py
+
+tengo que hacer lo de sesion para que se guarde y despues validar con otra template que sea login 
+la primera es regirter con un submit cuando se mande a llamar otra ruta llamada validlogin para validar
+si son iguales y si esta mal lo reinicio 
+
+
 pepepe
 {% extends 'base.html' %}
 

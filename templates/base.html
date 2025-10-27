@@ -25,7 +25,11 @@
           <a class="nav-link" href="/index2">vehicuos antiguos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/secion">{%if not session.get("usuario")%}
+          <a class="nav-link" href="/registro">registrarse
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">{%if not session.get("usuario")%}
             iniciar secion 
             {%else%}
             cerrar secion

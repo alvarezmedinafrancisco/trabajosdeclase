@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request , url_for, redirect, session
+from flask import Flask, render_template, request , url_for, redirect, session , flash
 app = Flask(__name__)
 
 usuario= [{
@@ -31,10 +31,12 @@ def validalogin():
     if request.method == "POST":
         contra = request.form.get("contra")
         newcontra = request.form.get("newcontra")
+        boton = request.form.get("boton")
+        email = request.form.get("email")
         
-        
-        if not contra or not newcontra:
-            error = "Este campo es requerido."
+        if not contra or not email or not newcontra:
+            flash ("Este campo es requerido.")
+            
         elif contra != newcontra:
             error = "Las contraseñas no coinciden."
         else:
@@ -44,6 +46,19 @@ def validalogin():
             
     return render_template('registro.html', error=error)
 
+@app.route('/registro', methods=["GET", "POST"])
+def registro():
+    error = None
+    if request.method == "POST":
+        usuario = request.form.get("usuario")
+        contra = request.form.get("contra")
+        if not usuario or not contra:
+            error = "Este campo es requerido."
+        else:
+            error = "Registro exitoso."
+            return render_template('base.html', error=error)
+            
+    return render_template('registro.html', error=error)
 
 @app.route('/login', methods=["GET", "POST"])
 def login():

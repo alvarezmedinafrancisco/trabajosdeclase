@@ -6,6 +6,57 @@ pip install flask
 python.exe -m pip install --upgrade pip
 app.py
 
+
+<script>
+function calcularTodo() {
+  const peso = parseFloat(document.getElementById('peso').value);
+  const altura = parseFloat(document.getElementById('altura').value) / 100;
+  const edad = parseInt(document.getElementById('edad').value);
+  const sexo = document.getElementById('sexo').value;
+  const actividad = parseFloat(document.getElementById('actividad').value);
+
+  if (!peso || !altura || !edad || !sexo || !actividad) {
+    alert("Por favor llena todos los campos.");
+    return;
+  }
+
+  // IMC
+  const imc = (peso / (altura * altura)).toFixed(2);
+
+  // TMB (fórmula Mifflin-St Jeor)
+  let tmb;
+  if (sexo === "hombre") {
+    tmb = 10 * peso + 6.25 * (altura * 100) - 5 * edad + 5;
+  } else {
+    tmb = 10 * peso + 6.25 * (altura * 100) - 5 * edad - 161;
+  }
+
+  // GCT
+  const gct = (tmb * actividad).toFixed(0);
+
+  // Peso ideal (fórmula de Devine)
+  let ideal;
+  if (sexo === "hombre") {
+    ideal = (50 + 0.9 * ((altura * 100) - 152)).toFixed(1);
+  } else {
+    ideal = (45.5 + 0.9 * ((altura * 100) - 152)).toFixed(1);
+  }
+
+  // Macronutrientes (proporciones promedio)
+  const proteinas = ((gct * 0.3) / 4).toFixed(0);
+  const carbos = ((gct * 0.5) / 4).toFixed(0);
+  const grasas = ((gct * 0.2) / 9).toFixed(0);
+
+  // Mostrar resultados
+  document.getElementById('imc').textContent = imc;
+  document.getElementById('tmb').textContent = tmb.toFixed(0);
+  document.getElementById('gct').textContent = gct;
+  document.getElementById('ideal').textContent = ideal;
+  document.getElementById('proteinas').textContent = proteinas;
+  document.getElementById('carbos').textContent = carbos;
+  document.getElementById('grasas').textContent = grasas;
+}
+</script>
 tengo que hacer lo de sesion para que se guarde y despues validar con otra template que sea login 
 la primera es regirter con un submit cuando se mande a llamar otra ruta llamada validlogin para validar
 si son iguales y si esta mal lo reinicio aber si puedo ocultar el navbar en lo que no esta logeado 
